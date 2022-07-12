@@ -55,7 +55,7 @@ public class Simulation {
         switch (input) {
             case 1 -> parking.printParking(carList);
             case 2 -> parking.printBills();
-//            case 3 -> printBillsCanvas(parking.bills);
+//            case 3 -> parking.getAverageBillPerMonth();
         }
     }
 

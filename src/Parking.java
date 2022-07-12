@@ -87,12 +87,21 @@ public class Parking {
 
     public void printBills() {
         System.out.println("\n+-------+--------------+----------+\n" +
-                           "| Car № |    Plate     |  Bill($) |\n" +
-                           "+-------+--------------+----------+");
+                "| Car № |    Plate     |  Bill($) |\n" +
+                "+-------+--------------+----------+");
         for (int i = 0; i < bills.size(); i++) {
             System.out.printf("| %4s  | %-12s |  %.2f  |%n", i + 1, bills.get(i).getPlate(), bills.get(i).getBill());
             System.out.println("+-------+--------------+----------+");
         }
+    }
+
+    public double getAverageBillPerMonth() {
+        double dailyBill = 0;
+        double averageBill = 0;
+        for (int i = 0; i < bills.size(); i++) {
+            dailyBill += bills.get(i).getBill();
+        }
+        return averageBill = dailyBill / 30;
     }
 
 }
